@@ -527,8 +527,8 @@ table(predicted2$label)
 table(predicted2$prediction)
 
 tabellaConfusione =table(predicted2$label, predicted2$prediction)
-colnames(tabellaConfusione) = c("Medium", "High", "Low")
-rownames(tabellaConfusione) = c("Medium", "High", "Low")
+colnames(tabellaConfusione) = c("High", "Medium", "Low")
+rownames(tabellaConfusione) = c("High", "Medium", "Low")
 tabellaConfusione
 
 error_rate=sum(tabellaConfusione)-sum(diag(tabellaConfusione))
@@ -594,4 +594,5 @@ tabellaConfusione
 error_rate=sum(tabellaConfusione)-sum(diag(tabellaConfusione))
 accuracy=1-error_rate/sum(tabellaConfusione)
 accuracy
+
 
